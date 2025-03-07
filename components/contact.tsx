@@ -50,7 +50,7 @@ export default function Contact() {
     {
       icon: <Phone className="h-10 w-10 text-primary" />,
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+1 (555) 125-4567",
       link: "tel:+15551234567",
     },
     {
