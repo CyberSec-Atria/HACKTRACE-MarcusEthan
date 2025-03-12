@@ -54,7 +54,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Button size="sm" asChild>
-              <Link href="https://v0-ethan-s-blog-site.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <Link href="https://v0-ethan-marcus-blog.vercel.app/" target="_blank" rel="noopener noreferrer">
                 Blog
               </Link>
             </Button>
@@ -83,7 +83,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Button className="w-full" asChild onClick={() => setIsOpen(false)}>
-                <Link href="https://v0-ethan-s-blog-site.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <Link href="https://v0-ethan-marcus-blog.vercel.app/" target="_blank" rel="noopener noreferrer">
                   Blog
                 </Link>
               </Button>
