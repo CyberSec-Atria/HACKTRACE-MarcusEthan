@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Star } from "lucide-react"
+import { useState } from "react"
+import clsx from "clsx"
 
 export default function Testimonials() {
     const testimonials = [
@@ -23,31 +25,53 @@ export default function Testimonials() {
         },
     ]
 
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+
     return (
         <section className="py-16 md:py-24">
             <div className="hidden">its hidden</div>
-        <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-12 text-center">Testimonials</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-card">
-            <CardContent className="p-6">
-            <div className="flex mb-4">
-            {[...Array(testimonial.rating)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-            ))}
+            <div className="container mx-auto px-4">
+                <h1 className="text-4xl font-bold mb-12 text-center">Testimonials</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {testimonials.map((testimonial, index) => {
+                        const isTarget = testimonial.text.includes("Best cybersec intern")
+
+                        return (
+                            <Card key={index} className="bg-card">
+                                <CardContent className="p-6">
+                                    <div className="flex mb-4">
+                                        {[...Array(testimonial.rating)].map((_, i) => (
+                                            <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                                        ))}
+                                    </div>
+
+                                    <p
+                                        className={clsx(
+                                            "text-muted-foreground mb-4 cursor-pointer transition-all whitespace-pre-wrap",
+                                            {
+                                                "animate-typewriter overflow-hidden border-r-2 border-muted":
+                                                    hoveredIndex === index && isTarget,
+                                            }
+                                        )}
+                                        onMouseEnter={() => isTarget && setHoveredIndex(index)}
+                                        onMouseLeave={() => setHoveredIndex(null)}
+                                    >
+                                        {hoveredIndex === index && isTarget
+                                            ? "*_*"
+                                            : testimonial.text}
+                                    </p>
+
+                                    <div>
+                                        <p className="font-semibold">{testimonial.name}</p>
+                                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        )
+                    })}
+                </div>
             </div>
-            <p className="text-muted-foreground mb-4">{testimonial.text}</p>
-            <div>
-            <p className="font-semibold">{testimonial.name}</p>
-            <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-            </div>
-            </CardContent>
-            </Card>
-        ))}
-        </div>
-        </div>
-        <div className="hidden">old_backup(backup_48)</div>
+            <div className="hidden">old_backup(backup_48)</div>
         </section>
     )
 }
