@@ -59,7 +59,7 @@ export default function Testimonials() {
                                                         setMousePos({ x: e.clientX, y: e.clientY - 20 })
                                                     }
                                                 >
-                                                    we've ever had
+                                                    we&apos;ve ever had
                                                     {hoveredIndex === index && (
                                                         <div
                                                             className="fixed bg-black text-white text-xs px-2 py-1 rounded shadow-md z-50 transition-opacity duration-150"
