@@ -9,7 +9,7 @@ import myimg from "@/resources/licensed-image.jpg"
 
 export default function Hero() {
   const [typedText, setTypedText] = useState("")
-  const fullText = "Penetration Tester & Security Researcher"
+  const fullText = "Lead PenTester at TechNova inc."
 
   useEffect(() => {
     if (typedText.length < fullText.length) {
