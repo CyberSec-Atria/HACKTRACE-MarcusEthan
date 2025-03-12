@@ -53,10 +53,13 @@ export default function About() {
           <div className="h-1 w-20 bg-primary mb-8"></div>
           <p className="text-lg text-center max-w-3xl text-muted-foreground">
             With a strong foundation in technology and problem-solving, I have explored various fields, from software
-            development to AI-driven solutions. My academic journey, including graduating from MIT in 2020, has shaped
-            my analytical thinking and approach to innovation. Over the years, I&apos;ve worked on projects that blend
-            creativity with logic, always striving to build impactful solutions while collaborating with like-minded
-            individuals.
+            development to AI-driven solutions. My academic journey, including graduating from{" "}
+            <span className="transition-all duration-150 hover:italic hover:font-bold">
+              MIT in 2020
+            </span>
+            , has shaped my analytical thinking and approach to innovation. Over the years, I&apos;ve worked on
+            projects that blend creativity with logic, always striving to build impactful solutions while collaborating
+            with like-minded individuals.
           </p>
         </div>
 
@@ -117,4 +120,3 @@ export default function About() {
     </section>
   )
 }
-
