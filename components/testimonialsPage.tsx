@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Star } from "lucide-react"
@@ -28,9 +28,10 @@ export default function Testimonials() {
     ]
 
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
 
     return (
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 relative">
             <div className="hidden">its hidden</div>
             <div className="container mx-auto px-4">
                 <h1 className="text-4xl font-bold mb-12 text-center">Testimonials</h1>
@@ -39,7 +40,7 @@ export default function Testimonials() {
                         const isTarget = testimonial.text.includes("Best cybersec intern")
 
                         return (
-                            <Card key={index} className="bg-card">
+                            <Card key={index} className="bg-card relative">
                                 <CardContent className="p-6">
                                     <div className="flex mb-4">
                                         {[...Array(testimonial.rating)].map((_, i) => (
@@ -48,19 +49,29 @@ export default function Testimonials() {
                                     </div>
 
                                     <p
-                                        className={clsx(
-                                            "text-muted-foreground mb-4 cursor-pointer transition-all whitespace-pre-wrap",
-                                            {
-                                                "animate-typewriter overflow-hidden border-r-2 border-muted":
-                                                    hoveredIndex === index && isTarget,
-                                            }
-                                        )}
+                                        className="text-muted-foreground mb-4 cursor-pointer relative"
                                         onMouseEnter={() => isTarget && setHoveredIndex(index)}
                                         onMouseLeave={() => setHoveredIndex(null)}
+                                        onMouseMove={(e) =>
+                                            setMousePos({ x: e.clientX, y: e.clientY - 20 })
+                                        }
                                     >
-                                        {hoveredIndex === index && isTarget
-                                            ? "*_*"
-                                            : testimonial.text}
+                                        {testimonial.text}
+
+                                        {hoveredIndex === index && isTarget && (
+                                            <div
+                                                className="fixed bg-black text-white text-xs px-2 py-1 rounded shadow-md z-50 transition-opacity duration-150"
+                                                style={{
+                                                    top: mousePos.y,
+                                                    left: mousePos.x,
+                                                    transform: "translate(-50%, -100%)",
+                                                    pointerEvents: "none",
+                                                    whiteSpace: "nowrap",
+                                                }}
+                                            >
+                                                {testimonial.text}
+                                            </div>
+                                        )}
                                     </p>
 
                                     <div>
