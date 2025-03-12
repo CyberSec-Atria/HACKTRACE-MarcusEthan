@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Star } from "lucide-react"
 import { useState } from "react"
-import clsx from "clsx"
+//import clsx from "clsx"
 
 export default function Testimonials() {
     const testimonials = [
