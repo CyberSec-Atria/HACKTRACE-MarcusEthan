@@ -77,7 +77,7 @@ export default function Testimonials() {
                                                 {" we've ever had. Ethan's ability to identify vulnerabilities and propose innovative solutions is exceptional."}
                                             </>
                                         ) : (
-                                            testimonial.text
+                                            <>{testimonial.text}</>
                                         )}
                                     </p>
 
@@ -92,9 +92,6 @@ export default function Testimonials() {
                 </div>
             </div>
         </section>
-    )
-}
-
     )
 }
 
