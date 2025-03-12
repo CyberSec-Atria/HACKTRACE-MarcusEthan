@@ -3,7 +3,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Star } from "lucide-react"
 import { useState } from "react"
-//import clsx from "clsx"
 
 export default function Testimonials() {
     const testimonials = [
@@ -50,14 +49,14 @@ export default function Testimonials() {
                                     <p className="text-muted-foreground mb-4 relative">
                                         {isTarget ? (
                                             <>
-                                                {"Best cybersec intern "}
                                                 <span
-                                                    className="cursor-pointer text-primary font-semibold relative"
+                                                    className="cursor-pointer relative"
                                                     onMouseEnter={() => setHoveredIndex(index)}
                                                     onMouseLeave={() => setHoveredIndex(null)}
                                                     onMouseMove={(e) =>
                                                         setMousePos({ x: e.clientX, y: e.clientY - 20 })
                                                     }
+                                                    style={{ fontWeight: "inherit", color: "inherit" }}
                                                 >
                                                     Best cybersec intern
                                                     {hoveredIndex === index && (
@@ -75,7 +74,7 @@ export default function Testimonials() {
                                                         </div>
                                                     )}
                                                 </span>
-                                                {`. Ethan's ability to identify vulnerabilities and propose innovative solutions is exceptional.`}
+                                                {" we've ever had. Ethan's ability to identify vulnerabilities and propose innovative solutions is exceptional."}
                                             </>
                                         ) : (
                                             testimonial.text
@@ -92,8 +91,10 @@ export default function Testimonials() {
                     })}
                 </div>
             </div>
-            <div className="hidden">old_backup(backup_48)</div>
         </section>
+    )
+}
+
     )
 }
 
