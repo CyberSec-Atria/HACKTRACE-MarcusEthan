@@ -1,5 +1,4 @@
 "use client"
-
 import { Card, CardContent } from "@/components/ui/card"
 import { Star } from "lucide-react"
 import { useState } from "react"
@@ -69,7 +68,7 @@ export default function Testimonials() {
                                                     whiteSpace: "nowrap",
                                                 }}
                                             >
-                                                {testimonial.text}
+                                                *_*
                                             </div>
                                         )}
                                     </p>
