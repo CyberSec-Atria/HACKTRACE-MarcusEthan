@@ -80,11 +80,16 @@ export default function Contact() {
                 <div className="mb-4">{info.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{info.title}</h3>
                 {info.link ? (
-                  <a href={info.link} className="text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href={info.link}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
                     {info.value}
                   </a>
                 ) : (
-                  <p className="text-muted-foreground">{info.value}</p>
+                  <p className="text-muted-foreground hover:italic transition-all duration-200">
+                    {info.value}
+                  </p>
                 )}
               </CardContent>
             </Card>
@@ -164,5 +169,7 @@ export default function Contact() {
       </div>
     </section>
   )
+}
+
 }
 
