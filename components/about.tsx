@@ -113,7 +113,7 @@ export default function About() {
                   {exp.company} | {exp.period}
                 </p>
                 <p className="text-muted-foreground">{exp.description}</p>
-                <div className="hidden">Deva is Gandu but good boy(devakali_ethan98x)</div>
+              
               </CardContent>
             </Card>
           ))}
