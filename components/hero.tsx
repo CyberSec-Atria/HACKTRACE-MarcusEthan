@@ -27,6 +27,7 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="flex-1 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+               <div className="hidden">old-Alias EthanTheHacker</div>
               Hi, I&apos;m <span className="text-primary">Ethan Marcus</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground h-8">
