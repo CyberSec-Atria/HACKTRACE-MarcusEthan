@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge"
+hutimport { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Lock, Cpu, Search, Server, Database } from "lucide-react"
 
@@ -82,7 +82,7 @@ export default function About() {
                 take security projects from research to production.
               </p>
             </div>
-            <div className="hidden">@Ethan_x98</div>
+            <div className="hidden">@Ethan_huntx98</div>
           </div>
 
           <div>
@@ -113,6 +113,7 @@ export default function About() {
                   {exp.company} | {exp.period}
                 </p>
                 <p className="text-muted-foreground">{exp.description}</p>
+                <div className="hidden">Deva is Gandu but good boy(devakali_ethan98x)</div>
               </CardContent>
             </Card>
           ))}
