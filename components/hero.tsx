@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react"
+import { ArrowRight, Instagram, Linkedin, Twitter } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import myimg from "@/resources/licensed-image.jpg"
@@ -51,13 +51,13 @@ export default function Hero() {
 
             <div className="flex items-center gap-4 pt-4">
               <Link
-                href="https://github.com"
+                href="https://www.instagram.com/ethan.98x/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                <Github className="h-6 w-6" />
-                <span className="sr-only">GitHub</span>
+                <Instagram className="h-6 w-6" />
+                <span className="sr-only">Instagram</span>
               </Link>
               <button
                 onClick={() => alert("EthanX98")}
