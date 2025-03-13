@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Instagram, Linkedin, Mail, Twitter } from "lucide-react"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -18,13 +18,13 @@ export default function Footer() {
 
           <div className="flex items-center space-x-6 mb-6">
             <Link
-              href="https://github.com"
+              href="https://www.instagram.com/ethan.98x/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
+              <Instagram className="h-5 w-5" />
+              <span className="sr-only">Instagram</span>
             </Link>
             <button
               onClick={() => alert("EthanX98")}
