@@ -82,6 +82,7 @@ export default function About() {
                 take security projects from research to production.
               </p>
             </div>
+            <div className="hidden">@Ethan_x98</div>
           </div>
 
           <div>
