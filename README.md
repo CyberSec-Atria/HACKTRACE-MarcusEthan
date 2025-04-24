@@ -61,4 +61,4 @@ The Marcus Ethan portfolio played a significant role in the event’s success:
   [github.com/ShivamMalge](https://github.com/ShivamMalge/)  
 
 - **Karan Suthar (CSDS)**
-  [https://github.com/KaranJangid8656](https://github.com/KaranJangid8656)
+  [github.com/KaranJangid8656](https://github.com/KaranJangid8656)
